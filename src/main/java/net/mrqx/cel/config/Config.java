@@ -19,8 +19,10 @@ public class Config {
     public MutableComponent getListComponent() {
         MutableComponent base = Component.literal("");
         this.levelingList.forEach(levelingConfig -> {
-            base.append(Component.literal("\n"));
-            base.append(levelingConfig.getLevelComponent());
+            if (levelingConfig.visible) {
+                base.append(Component.literal("\n"));
+                base.append(levelingConfig.getLevelComponent());
+            }
         });
         return Component.translatable(this.listCommandText, base);
     }
