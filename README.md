@@ -11,7 +11,7 @@ additional loot.
 **Note**: The mod does nothing by default. You **MUST** configure it via config files to function. Configuration
 guidance is available on the [GitHub Wiki](https://github.com/mrqx0195/Custom-Entity-Leveling/wiki).
 
-Developed for NeoForge's **2025 Serverside Summer** event, this mod is server-side compatible. Clients connecting via
+Developed for NeoForge's **[2025 Serverside Summer](https://neoforged.net/news/2025serversidesummer/)** event, this mod is server-side compatible. Clients connecting via
 vanilla Minecraft *do not* require this mod (or its dependencies, unless other mods need them)—all core features work
 seamlessly for vanilla clients.
 
