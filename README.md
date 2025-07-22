@@ -1,25 +1,22 @@
+# Custom Entity Leveling
 
-Installation information
-=======
+A highly customizable mod that enables mobs to gain "levels" similar to elite monsters.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Introduction
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+This mod introduces a "leveling" system to Minecraft: Non-player mobs have a chance to spawn with various "levels,"
+granting them different enhancements—including attribute boosts and status effects. Defeating these leveled mobs yields
+additional loot.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+**Note**: The mod does nothing by default. You **MUST** configure it via config files to function. Configuration
+guidance is available on the [GitHub Wiki](https://github.com/mrqx0195/Custom-Entity-Leveling/wiki).
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Developed for NeoForge's **2025 Serverside Summer** event, this mod is server-side compatible. Clients connecting via
+vanilla Minecraft *do not* require this mod (or its dependencies, unless other mods need them)—all core features work
+seamlessly for vanilla clients.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## License
+
+This mod is open-sourced under the **MIT License**.
+
+You may include it in your modpacks/servers as long as you **comply with the license terms**.
