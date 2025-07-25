@@ -23,7 +23,7 @@ public class EffectConfig {
     @Value(comment = "Sets whether the particle effect of this status is visible.")
     public boolean visible = false;
 
-    @Value(comment = "Set effect tooltip text for '/customElementLeveling list'. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format")
+    @Value(comment = "Set effect tooltip text for '/customElementLeveling list'. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language")
     public String tooltip = " - %s";
 
     public MutableComponent getTooltips() {

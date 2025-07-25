@@ -23,7 +23,8 @@ public class EntitySpawnHandler {
                 && !event.loadedFromDisk()
                 && !(livingEntity instanceof Player)) {
             AtomicBoolean leveled = new AtomicBoolean(false);
-            Config.CONFIG.ifPresent(config -> config.levelingList.forEach(levelingConfig -> {
+            Config config = Config.getInstance();
+            config.levelingList.forEach(levelingConfig -> {
                 if (leveled.get()) {
                     return;
                 }
@@ -41,7 +42,7 @@ public class EntitySpawnHandler {
                     livingEntity.heal(livingEntity.getMaxHealth());
                     livingEntity.getPersistentData().putBoolean(CustomEntityLeveling.IS_LEVELED_KEY, true);
                 }
-            }));
+            });
         }
     }
 

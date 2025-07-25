@@ -22,6 +22,6 @@ public class CustomEntityLeveling {
 
     @SubscribeEvent
     public static void onServerStarting(ServerStartingEvent event) {
-        Config.CONFIG.get();
+        Config.CONFIG_MANAGER.get().load();
     }
 }

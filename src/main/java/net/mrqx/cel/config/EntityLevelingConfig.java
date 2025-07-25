@@ -17,10 +17,10 @@ public class EntityLevelingConfig {
     @Value(comment = "Sets the ID for this level.")
     public String id = "example_level";
 
-    @Value(comment = "Sets the custom name for this level. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format")
+    @Value(comment = "Sets the custom name for this level. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language")
     public String levelName = "Example Level";
 
-    @Value(comment = "Sets the custom name for entities of this level. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format.\nParameter: Name of this entity.")
+    @Value(comment = "Sets the custom name for entities of this level. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language.\nParameter: Name of this entity.")
     public String entityName = "Example Level %s";
 
     @Value(comment = "Sets whether entityList is in blacklist mode (default is whitelist).")
@@ -45,14 +45,26 @@ public class EntityLevelingConfig {
     @Value(comment = "Sets whether this level is visible for '/customElementLeveling list'.")
     public boolean visible = true;
 
-    @Value(comment = "Set prompt text for '/customElementLeveling list'. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format\nParameter: levelName.")
+    @Value(comment = "Set prompt text for '/customElementLeveling list'. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language\nParameter: levelName.")
     public String listCommandText = " - %s";
 
-    @Value(comment = "Set entity text for '/customElementLeveling list'. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format\nParameter: levelName.")
+    @Value(comment = "Set entity text for '/customElementLeveling list'. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language\nParameter: levelName.")
     public String listCommandEntityText = "\n - %s";
 
-    @Value(comment = "Set tooltip text for '/customElementLeveling list'. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format")
+    @Value(comment = "Set tooltip text for '/customElementLeveling list'. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language")
     public String listCommandTooltips = "§eAn example entity level.\n\n§3Is Blacklist mode: %1$s\n§7Entity List: %2$s\n§aAttribute List: %3$s\n§dEffect List: %4$s\n\n§bSpawn Chance: %5$s";
+
+    @Value(comment = "Sets whether to notify the killer when killing an entity of this level.")
+    public boolean noticeKiller = true;
+
+    @Value(comment = "Sets the notification content sent to the killer when killing an entity of this level. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language\nParameter: entity`s name, levelName.")
+    public String noticeKillerText = "Congratulations! You killed a %1$s at level %2$s!";
+
+    @Value(comment = "Sets whether to notify all players when killing an entity of this level.")
+    public boolean noticeAllPlayer = true;
+
+    @Value(comment = "Sets the notification content sent to all players when killing an entity of this level. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language\nParameter: player`s name, entity`s name, levelName.")
+    public String noticeAllPlayerText = "Congratulations! Player %1$s killed a %2$s at level %3$s!";
 
     public MutableComponent getLevelName() {
         return Component.translatable(this.levelName);

@@ -21,7 +21,7 @@ public class AttributeConfig {
     @Value(comment = "Sets the operation type of this attribute modifier.")
     public String operation = AttributeModifier.Operation.ADD_VALUE.getSerializedName();
 
-    @Value(comment = "Set attribute tooltip text for '/customElementLeveling list'. Supports translatable text components (requires client resource pack). See: https://minecraft.wiki/w/Text_component_format")
+    @Value(comment = "Set attribute tooltip text for '/customElementLeveling list'. Supports translatable key (requires client resource pack). See: https://minecraft.wiki/w/Resource_pack#Language")
     public String tooltip = " - %s";
 
     public MutableComponent getTooltip() {
